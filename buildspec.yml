@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo installing nodejs...
+      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+      - sudo apt-get install -y nodejs  #aws code build use ubuntu environement
+  pre_build:
+    commands:
+      - echo installing dependencies...
+      - npm i -g @angular/cli
+      - npm -f install
+  build:
+    commands:
+      # - echo testing...
+      # - echo building...
+      - ng build --prod
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
