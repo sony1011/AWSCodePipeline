@@ -4,8 +4,9 @@ files:
   - source: /index.html
     destination: /var/www/html
 hooks:
-  AfterInstall:
+  BeforeInstall:
     - location: scripts/install_dependencies.sh
-  ApplicationStart:
+  AfterInstall:
     - location: scripts/start_apache_server.sh
       timeout: 300
+  
