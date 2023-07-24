@@ -7,14 +7,12 @@ hooks:
   BeforeInstall:
     - location: scripts/remove_root_dir
       timeout: 900
-      runas: root
+   #   runas: root
 
-  AfterInstall:
+  ApplicationStart:
     - location: scripts/install_dependencies.sh
       timeout: 300
-      runas: root
-      
-  AfterInstall:
+     # runas: root
     - location: scripts/start_apache_server.sh
       timeout: 300
-  
+      
