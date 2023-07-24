@@ -4,8 +4,9 @@ phases:
   install:
     commands:
       - echo installing nodejs...
-      - sudo apt-get install -y nodejs  #aws code build use ubuntu environement
-      - sudo apt install -y npm
+      - sudo apt update
+      - sudo apt install nodejs -y #aws code build use ubuntu environement
+      
   pre_build:
     commands:
       - echo installing dependencies...
