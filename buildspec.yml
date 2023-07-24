@@ -11,13 +11,3 @@ phases:
     commands:
       - echo installing dependencies...
       - npm i -g @angular/cli
-      - npm install --force
-  build:
-    commands:
-      # - echo testing...
-      # - echo building...
-      - ng build --prod
-artifacts:
-  files:
-    - "**/*"
-  discard-paths: no
